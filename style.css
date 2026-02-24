@@ -148,3 +148,55 @@ ol{
 a{
     color: var(--link)
 }
+
+/* ATTEMPTING TO MAKE IT LESS TERRIBLE ON MOBILE */
+@media (max-width: 600px) {
+  .page {
+    padding: 22px 18px 40px;
+    margin: 18px 12px 50px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 14px;
+  }
+
+  .brand {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .brand img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand .title {
+    font-size: 24px;
+    line-height: 1.05;
+    margin: 0;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap; /* allows wrapping if needed */
+  }
+
+  nav a {
+    margin-left: 0;  /* overrides desktop spacing */
+    font-size: 18px;
+  }
+
+  .h1 h1 {
+    font-size: 42px;
+  }
+
+  p, ol {
+    font-size: 19px;
+  }
+}
