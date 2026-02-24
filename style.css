@@ -149,7 +149,14 @@ a{
     color: var(--link)
 }
 
+/* Header base tweaks (all sizes) */
+.brand { align-items: center; }
+.brand-center { display: block; }
+header { align-items: center; }
+
 /* ATTEMPTING TO MAKE IT LESS TERRIBLE ON MOBILE */
+
+/* Mobile header: logo left, title centered, nav centered underneath */
 @media (max-width: 600px) {
   .page {
     padding: 22px 18px 40px;
@@ -157,43 +164,56 @@ a{
   }
 
   header {
+    /* override desktop header row */
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 14px;
+    align-items: stretch; /* full width */
+    gap: 10px;
     padding-bottom: 14px;
   }
 
+  /* Make brand a 2-column grid:
+     [logo][title centered within remaining space] */
   .brand {
-    justify-content: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 12px;
     text-align: center;
   }
 
   .brand img {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
+    justify-self: start; /* logo left */
   }
 
   .brand .title {
-    font-size: 24px;
+    justify-self: center; /* title centered */
+    font-size: 26px;
     line-height: 1.05;
     margin: 0;
   }
 
+  /* Center the nav underneath */
   nav {
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 18px;
-    flex-wrap: wrap; /* allows wrapping if needed */
+    gap: 22px;
+    flex-wrap: wrap;
+    padding-top: 4px;
   }
 
   nav a {
-    margin-left: 0;  /* overrides desktop spacing */
-    font-size: 18px;
+    margin-left: 0; /* kills desktop spacing */
+    font-size: 20px;
   }
 
+  /* Optional: tighten big titles a bit on mobile */
   .h1 h1 {
-    font-size: 42px;
+    font-size: 44px;
   }
 
   p, ol {
