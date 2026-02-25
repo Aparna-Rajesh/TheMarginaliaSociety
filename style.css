@@ -73,7 +73,8 @@ nav a:hover{ text-decoration: underline; }
   display:flex;
   align-items:center;
   gap: 14px;
-  margin: 26px 0 10px;
+  margin: 26px 0 5px;
+  margin-left: 6px;
 }
 
 .h1 img{
@@ -94,7 +95,7 @@ nav a:hover{ text-decoration: underline; }
   font-size: 40px;
   font-weight: 700;
   color: #8a7a1a; /* warm ink */
-  margin: 26px 0 10px;
+  margin: 29px 0 10px;
 }
 
 /* Body copy like a printed doc */
@@ -139,14 +140,21 @@ ol{
 }
 
 .footer-sign{
-  margin-top: 18px;
+  margin-top: 30px;
   font-family: "Caveat", cursive;
-  font-size: 28px;
+  font-size: 30px;
   color: #8a7a1a;
 }
 
 a{
     color: var(--link)
+}
+
+.contact-form{
+  display: block;
+  width: min(760px, calc(100% + 24px));
+  margin: 0 0 18px -53px;
+  border: 0;
 }
 
 /* Header base tweaks (all sizes) */
@@ -218,5 +226,10 @@ header { align-items: center; }
 
   p, ol {
     font-size: 19px;
+  }
+
+  .contact-form {
+    width: 100%;
+    margin-left: 0px;
   }
 }
