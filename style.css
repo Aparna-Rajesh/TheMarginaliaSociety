@@ -190,15 +190,20 @@ header { align-items: center; }
     position: relative;
   }
 
+  .brand {
+    flex-direction: column;
+  }
+
   .brand img {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: -10px; /* adjust this value to move logo left */
+    width: 40px;
+    height: 40px;
+    .brand {
+      gap: 8px;
+    }
   }
 
   .brand .title {
-    font-size: 26px;
+    font-size: 20px;
     line-height: 1.05;
     margin: 0;
   }
@@ -220,8 +225,13 @@ header { align-items: center; }
 
   /* Optional: tighten big titles a bit on mobile */
   .h1 h1 {
-    font-size: 44px;
+    font-size: 40px;
   }
+
+  /* Handwritten section headers */
+.script{
+  font-size: 35px;
+}
 
   p, ol {
     font-size: 19px;
