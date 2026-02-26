@@ -180,25 +180,24 @@ header { align-items: center; }
     padding-bottom: 14px;
   }
 
-  /* Make brand a 2-column grid:
-     [logo][title centered within remaining space] */
+  /* Make brand a flex layout:
+     [logo offset left][title centered] */
   .brand {
     width: 100%;
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     align-items: center;
-    column-gap: 12px;
-    text-align: center;
+    justify-content: center;
+    position: relative;
   }
 
   .brand img {
-    width: 42px;
-    height: 42px;
-    justify-self: start; /* logo left */
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -10px; /* adjust this value to move logo left */
   }
 
   .brand .title {
-    justify-self: center; /* title centered */
     font-size: 26px;
     line-height: 1.05;
     margin: 0;
